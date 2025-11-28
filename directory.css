@@ -1,0 +1,47 @@
+.directory {
+	font-family: monospace;
+	--thickness: 1.5px;
+}
+
+.directory ul {
+	list-style-type: none;
+}
+
+.directory li {
+	position: relative;
+	padding-left: 1ch;
+}
+
+.directory li::before {
+	content: "";
+	background: linear-gradient(currentColor, currentColor) no-repeat center / 100% --thickness;
+	
+	display: block;
+	width: 4ch;
+	height: 1lh;
+
+	position: absolute;
+	left: -4ch;
+	border-left: currentColor solid --thickness;
+}
+
+.directory li:last-child::before {
+	height: 0.5lh;
+	background-image: none;
+	border-bottom: currentColor solid --thickness;
+}
+
+.directory li ul {
+	position: relative;
+}
+
+.directory li:not(:last-child) > ul::before {
+	content: "";
+	position: absolute;
+	border-left: currentColor solid --thickness;
+	
+	width: 0px;
+	top: 0;
+	left: -5ch;
+	bottom: 0;
+}
