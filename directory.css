@@ -1,4 +1,5 @@
 .directory {
+	/* Customise these to your liking */
 	font-family: monospace;
 	--thickness: 1.5px;
 }
