@@ -14,7 +14,7 @@
 
 .directory li::before {
 	content: "";
-	background: linear-gradient(currentColor, currentColor) no-repeat center / 100% --thickness;
+	background: linear-gradient(currentColor, currentColor) no-repeat center / 100% var(--thickness);
 	
 	display: block;
 	width: 4ch;
@@ -22,13 +22,13 @@
 
 	position: absolute;
 	left: -4ch;
-	border-left: currentColor solid --thickness;
+	border-left: currentColor solid var(--thickness);
 }
 
 .directory li:last-child::before {
 	height: 0.5lh;
 	background-image: none;
-	border-bottom: currentColor solid --thickness;
+	border-bottom: currentColor solid var(--thickness);
 }
 
 .directory li ul {
@@ -38,7 +38,7 @@
 .directory li:not(:last-child) > ul::before {
 	content: "";
 	position: absolute;
-	border-left: currentColor solid --thickness;
+	border-left: currentColor solid var(--thickness);
 	
 	width: 0px;
 	top: 0;
